@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretariat - United Ancient Indigenous Enlightened Nations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #4F4234;
+            background-color: white;
+            font-size: 16px;
+        }
+
+        /* Header */
+        .header {
+            background: #5e2121;
+            color: white;
+            padding: 15px 0;
+            border-bottom: 1px solid #8B4513;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background: #D4AF37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #383024;
+            font-size: 16px;
+        }
+
+        .org-info {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .tagline {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-top: 2px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 14px;
+        }
+
+        .header-right a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .header-right a:hover {
+            color: #CF3E20;
+        }
+
+        /* Navigation */
+        .nav-bar {
+            background: #F1EBDF;
+            border-bottom: 1px solid #ccc;
+            padding: 8px 0;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            font-size: 12px;
+        }
+
+        .nav-menu a {
+            color: #4F4234;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #CF3E20;
+        }
+
+        /* Banner Section */
+        .banner {
+            background: linear-gradient(rgba(94, 33, 33, 0.7), rgba(94, 33, 33, 0.7)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23336699" width="1200" height="400"/><rect fill="%23ffffff" y="300" width="1200" height="100" opacity="0.1"/><polygon fill="%23D4AF37" opacity="0.3" points="0,400 200,300 400,350 600,280 800,320 1000,290 1200,340 1200,400"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .banner-content h1 {
+            font-size: 5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px 0;
+        }
+
+        .page-title {
+            font-size: 2.8rem;
+            color: #383024;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(45deg, #336699, #5e2121), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200"><rect fill="%23336699" width="800" height="200"/><rect fill="%23ffffff" y="0" width="800" height="40" opacity="0.1"/><rect fill="%23D4AF37" y="160" width="800" height="40" opacity="0.2"/></svg>');
+            border-radius: 8px;
+            margin: 25px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .content-text {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Section Titles */
+        .section-title {
+            color: #383024;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 40px 0 25px 0;
+            border-bottom: 2px solid #D4AF37;
+            padding-bottom: 8px;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 25px 0;
+        }
+
+        .column {
+            font-size: 15px;
+        }
+
+        .column h3 {
+            color: #383024;
+            font-size: 18px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .column ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .column li {
+            margin-bottom: 6px;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .column li:before {
+            content: "•";
+            color: #D4AF37;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .column a {
+            color: #4F4234;
+            text-decoration: none;
+            line-height: 1.5;
+            transition: color 0.3s;
+        }
+
+        .column a:hover {
+            color: #CF3E20;
+            text-decoration: underline;
+        }
+
+        /* Regional Commissions Section */
+        .regional-section {
+            margin: 50px 0;
+        }
+
+        .regional-title {
+            color: #383024;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #D4AF37;
+            padding-bottom: 8px;
+        }
+
+        .regional-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 25px;
+        }
+
+        .regional-item {
+            margin-bottom: 20px;
+        }
+
+        .regional-item h4 {
+            color: #383024;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        .regional-item p {
+            font-size: 15px;
+            color: #4F4234;
+            margin-bottom: 12px;
+        }
+
+        .regional-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .regional-item li {
+            margin-bottom: 4px;
+            padding-left: 18px;
+            position: relative;
+            font-size: 15px;
+        }
+
+        .regional-item li:before {
+            content: "•";
+            color: #D4AF37;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .regional-item a {
+            color: #4F4234;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .regional-item a:hover {
+            color: #CF3E20;
+            text-decoration: underline;
+        }
+
+        /* Footer Links Section */
+        .footer-links {
+            background: #F1EBDF;
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .footer-column h4 {
+            color: #383024;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column a {
+            color: #4F4234;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.5;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: #CF3E20;
+            text-decoration: underline;
+        }
+
+        /* Main Footer */
+        .footer {
+            background: #5e2121;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-logo-icon {
+            width: 35px;
+            height: 35px;
+            background: #D4AF37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #383024;
+            font-size: 12px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-social a:hover {
+            color: #CF3E20;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #8B4513;
+            margin-top: 15px;
+            padding-top: 15px;
+            text-align: center;
+            font-size: 11px;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-bottom-links a:hover {
+            color: #CF3E20;
+        }
+
+        .social-bar {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .social-bar a {
+            display: inline-block;
+            margin: 0 5px;
+            color: #4F4234;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-bar a:hover {
+            color: #CF3E20;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .two-column, .regional-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .banner-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .footer-bottom-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">UN</div>
+                <div>
+                    <div class="org-info">United Nations</div>
+                    <div class="tagline">Peace, dignity and equality on a healthy planet</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <span>العربية</span>
+                <span>中文</span>
+                <span>English</span>
+                <span>Français</span>
+                <span>Русский</span>
+                <span>Español</span>
+                <a href="#">Other Languages</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-content">
+            <ul class="nav-menu">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Peace and Security</a></li>
+                <li><a href="#">Human Rights</a></li>
+                <li><a href="#">Humanitarian Affairs</a></li>
+                <li><a href="#">Sustainable Development</a></li>
+                <li><a href="#">Climate Action</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="banner-content">
+            <div>
+                <h1>SECRETARIAT</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Title -->
+            <h1 class="page-title">Secretariat</h1>
+
+            <!-- Main Image -->
+            <div class="main-image">
+                United Nations Headquarters Building with Member State Flags
+            </div>
+            <p class="image-caption">
+                The United Nations Secretariat building at UN Headquarters in New York, with flags of Member States flying in front of the building.
+            </p>
+
+            <!-- Introduction Text -->
+            <p class="content-text">
+                The United Nations Secretariat serves as the chief administrative organ of the Organization. It provides studies, information, and facilities needed by United Nations bodies for their meetings. It also carries out tasks as directed by the Security Council, the General Assembly, the Economic and Social Council, and other organs. The Secretariat is headed by the Secretary-General, who provides overall administrative guidance.
+            </p>
+
+            <p class="content-text">
+                At the United Nations Headquarters in New York, the Secretariat consists of departments and offices with staff members coming from some 170 countries. In the interest of securing the highest standards of efficiency, competence, and integrity, with due regard for the importance of recruiting the staff on as wide a geographical basis as possible, men and women are recruited from all over the world to serve the international community at the United Nations.
+            </p>
+
+            <!-- Secretary General Section -->
+            <h2 class="section-title">Secretary-General</h2>
+
+            <!-- Offices and Departments Section -->
+            <h2 class="section-title">Offices and Departments at Headquarters in New York</h2>
+
+            <div class="two-column">
+                <div class="column">
+                    <h3>Executive Office of the Secretary-General</h3>
+                    <ul>
+                        <li><a href="#">Executive Office</a></li>
+                        <li><a href="#">Deputy Secretary-General</a></li>
+                        <li><a href="#">Chef de Cabinet</a></li>
+                        <li><a href="#">Policy Coordination and Inter-Agency Affairs</a></li>
+                        <li><a href="#">Spokesperson for the Secretary-General</a></li>
+                    </ul>
+
+                    <h3>Office of Internal Oversight Services</h3>
+                    <ul>
+                        <li><a href="#">Internal Audit Division</a></li>
+                        <li><a href="#">Evaluation and Monitoring Division</a></li>
+                        <li><a href="#">Investigation Division</a></li>
+                    </ul>
+
+                    <h3>Office of Legal Affairs</h3>
+                    <ul>
+                        <li><a href="#">Office of Legal Counsel</a></li>
+                        <li><a href="#">Division for Ocean Affairs and the Law of the Sea</a></li>
+                        <li><a href="#">Codification Division</a></li>
+                        <li><a href="#">Treaty Section</a></li>
+                        <li><a href="#">General Legal Division</a></li>
+                    </ul>
+
+                    <h3>Department of Political and Peacebuilding Affairs</h3>
+                    <ul>
+                        <li><a href="#">Policy and Mediation Division</a></li>
+                        <li><a href="#">Americas and Europe Division</a></li>
+                        <li><a href="#">Asia and the Pacific Division</a></li>
+                        <li><a href="#">Middle East and West Asia Division</a></li>
+                        <li><a href="#">Africa I Division</a></li>
+                        <li><a href="#">Africa II Division</a></li>
+                        <li><a href="#">Electoral Assistance Division</a></li>
+                        <li><a href="#">Decolonization Unit</a></li>
+                        <li><a href="#">Security Council Affairs Division</a></li>
+                    </ul>
+
+                    <h3>Department of Peace Operations</h3>
+                    <ul>
+                        <li><a href="#">Office of Operations</a></li>
+                        <li><a href="#">Office of Rule of Law and Security Institutions</a></li>
+                        <li><a href="#">Office of Military Affairs</a></li>
+                        <li><a href="#">Police Division</a></li>
+                        <li><a href="#">Policy, Evaluation and Training Division</a></li>
+                        <li><a href="#">Division of Healthcare Management and Occupational Safety and Health</a></li>
+                    </ul>
+
+                    <h3>Office for the Coordination of Humanitarian Affairs</h3>
+                    <ul>
+                        <li><a href="#">Coordination and Response Division</a></li>
+                        <li><a href="#">Policy Development and Studies Branch</a></li>
+                        <li><a href="#">Partnerships and Resource Mobilization Branch</a></li>
+                        <li><a href="#">Information Management Branch</a></li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h3>UN-Women Coordination Entity</h3>
+                    <ul>
+                        <li><a href="#">Policy Division</a></li>
+                        <li><a href="#">Programme Division</a></li>
+                        <li><a href="#">UN System Coordination Division</a></li>
+                    </ul>
+
+                    <h3>Department of Economic and Social Affairs</h3>
+                    <ul>
+                        <li><a href="#">Office of Sustainable Development</a></li>
+                        <li><a href="#">Division for Sustainable Development Goals</a></li>
+                        <li><a href="#">Statistics Division</a></li>
+                        <li><a href="#">Population Division</a></li>
+                        <li><a href="#">Division for Social Policy and Development</a></li>
+                        <li><a href="#">Division for Public Institutions and Digital Government</a></li>
+                        <li><a href="#">Financing for Sustainable Development Office</a></li>
+                        <li><a href="#">Division for Inclusive Social Development</a></li>
+                        <li><a href="#">Secretariat of the Permanent Forum on Indigenous Issues</a></li>
+                        <li><a href="#">Indigenous Peoples Partnership</a></li>
+                        <li><a href="#">UN Forum on Forests Secretariat</a></li>
+                    </ul>
+
+                    <h3>Department of Global Communications</h3>
+                    <ul>
+                        <li><a href="#">Strategic Communications Division</a></li>
+                        <li><a href="#">News and Media Division</a></li>
+                        <li><a href="#">Outreach Division</a></li>
+                        <li><a href="#">Web Services Section</a></li>
+                    </ul>
+
+                    <h3>Department of Safety and Security</h3>
+                    <ul>
+                        <li><a href="#">Division of Regional Operations</a></li>
+                        <li><a href="#">Security and Safety Service</a></li>
+                        <li><a href="#">Information and Intelligence Analysis Section</a></li>
+                    </ul>
+
+                    <h3>Department of Operational Support</h3>
+                    <ul>
+                        <li><a href="#">Assistant Secretary-General for Supply Chain Management</a></li>
+                        <li><a href="#">Assistant Secretary-General for Human Resources</a></li>
+                        <li><a href="#">Operational Support Department</a></li>
+                    </ul>
+
+                    <h3>Department of Management Strategy, Policy and Compliance</h3>
+                    <ul>
+                        <li><a href="#">Office of Programme Planning, Budget and Finance</a></li>
+                        <li><a href="#">Office of Human Resources</a></li>
+                        <li><a href="#">Business Transformation and Accountability Division</a></li>
+                        <li><a href="#">Office of Information and Communications Technology</a></li>
+                        <li><a href="#">Ethics Office</a></li>
+                        <li><a href="#">Office of Central Support Services</a></li>
+                    </ul>
+
+                    <h3>Office of Counter-Terrorism</h3>
+                    <ul>
+                        <li><a href="#">Counter-Terrorism Implementation Task Force</a></li>
+                        <li><a href="#">United Nations Counter-Terrorism Centre</a></li>
+                    </ul>
+
+                    <h3>Office on Drugs and Crime</h3>
+                    <ul>
+                        <li><a href="#">Division for Operations</a></li>
+                        <li><a href="#">Division for Policy Analysis and Public Affairs</a></li>
+                        <li><a href="#">Division for Treaty Affairs</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Offices Outside Main Headquarters Section -->
+            <h2 class="section-title">Offices Outside the Main Headquarters</h2>
+
+            <div class="two-column">
+                <div class="column">
+                    <h3>Geneva</h3>
+                    <ul>
+                        <li><a href="#">United Nations Office at Geneva</a></li>
+                        <li><a href="#">Office of the Director-General</a></li>
+                        <li><a href="#">Conference Management Division</a></li>
+                        <li><a href="#">Division of Administration</a></li>
+                        <li><a href="#">Safety and Security Section</a></li>
+                        <li><a href="#">Medical Service</a></li>
+                        <li><a href="#">Library and Archives Geneva</a></li>
+                    </ul>
+
+                    <h3>Vienna</h3>
+                    <ul>
+                        <li><a href="#">United Nations Office at Vienna</a></li>
+                        <li><a href="#">Conference Management Service</a></li>
+                        <li><a href="#">Division of Administration</a></li>
+                        <li><a href="#">Security and Safety Section</a></li>
+                        <li><a href="#">United Nations Information Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h3>Nairobi</h3>
+                    <ul>
+                        <li><a href="#">United Nations Office at Nairobi</a></li>
+                        <li><a href="#">Conference Services Division</a></li>
+                        <li><a href="#">Division of Administrative Services</a></li>
+                        <li><a href="#">United Nations Information Centre</a></li>
+                    </ul>
+
+                    <h3>Other Locations</h3>
+                    <ul>
+                        <li><a href="#">Regional Commissions</a></li>
+                        <li><a href="#">UN Information Centres</a></li>
+                        <li><a href="#">Liaison Offices</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- UN Regional Commissions -->
+            <div class="regional-section">
+                <h2 class="regional-title">UN Regional Commissions</h2>
+                <div class="regional-grid">
+                    <div class="column">
+                        <div class="regional-item">
+                            <h4>Addis Ababa</h4>
+                            <p>Economic Commission for Africa</p>
+                            <ul>
+                                <li><a href="#">Office of the Executive Secretary</a></li>
+                                <li><a href="#">Programme Planning and Finance Section</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="regional-item">
+                            <h4>Bangkok</h4>
+                            <p>Economic and Social Commission for Asia and the Pacific</p>
+                            <ul>
+                                <li><a href="#">Office of the Executive Secretary</a></li>
+                                <li><a href="#">Programme Management</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="regional-item">
+                            <h4>Beirut</h4>
+                            <p>Economic and Social Commission for Western Asia</p>
+                            <ul>
+                                <li><a href="#">Office of the Executive Secretary</a></li>
+                                <li><a href="#">Conference Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="regional-item">
+                            <h4>Geneva</h4>
+                            <p>Economic Commission for Europe</p>
+                            <ul>
+                                <li><a href="#">Office of the Executive Secretary</a></li>
+                                <li><a href="#">Programme Management Unit</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="regional-item">
+                            <h4>Santiago</h4>
+                            <p>Economic Commission for Latin America and the Caribbean</p>
+                            <ul>
+                                <li><a href="#">Office of the Executive Secretary</a></li>
+                                <li><a href="#">Programme Planning and Operations Division</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Bar -->
+            <div class="social-bar">
+                <a href="#" title="Facebook">📘</a>
+                <a href="#" title="Twitter">🐦</a>
+                <a href="#" title="YouTube">📺</a>
+                <a href="#" title="LinkedIn">💼</a>
+                <a href="#" title="Instagram">📸</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Links Section -->
+    <div class="footer-links">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Secretary-General</a></li>
+                        <li><a href="#">Deputy Secretary-General</a></li>
+                        <li><a href="#">Senior Management Group</a></li>
+                        <li><a href="#">Spokesperson for the Secretary-General</a></li>
+                        <li><a href="#">UN System Chief Executives Board</a></li>
+                        <li><a href="#">UN Leadership</a></li>
+                        <li><a href="#">Job Opportunities</a></li>
+                        <li><a href="#">Internship Programme</a></li>
+                        <li><a href="#">Young Professionals Programme</a></li>
+                        <li><a href="#">Language Careers</a></li>
+                        <li><a href="#">Disabilities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources / Services</h4>
+                    <ul>
+                        <li><a href="#">Dag Hammarskjöld Library</a></li>
+                        <li><a href="#">Journal</a></li>
+                        <li><a href="#">UN Documentation Centre</a></li>
+                        <li><a href="#">UN iLibrary</a></li>
+                        <li><a href="#">Maps</a></li>
+                        <li><a href="#">Databases</a></li>
+                        <li><a href="#">Publications</a></li>
+                        <li><a href="#">Data and Statistics</a></li>
+                        <li><a href="#">Research Guides</a></li>
+                        <li><a href="#">Evaluation Reports</a></li>
+                        <li><a href="#">Internal Justice</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Key Documents</h4>
+                    <ul>
+                        <li><a href="#">Charter of the United Nations</a></li>
+                        <li><a href="#">Universal Declaration of Human Rights</a></li>
+                        <li><a href="#">Convention on the Rights of the Child</a></li>
+                        <li><a href="#">Statute of the International Court of Justice</a></li>
+                        <li><a href="#">Vienna Convention on Diplomatic Relations</a></li>
+                        <li><a href="#">Geneva Conventions</a></li>
+                        <li><a href="#">Staff Regulations and Rules</a></li>
+                        <li><a href="#">Financial Regulations and Rules</a></li>
+                        <li><a href="#">Procurement Manual</a></li>
+                        <li><a href="#">Administrative Instructions</a></li>
+                        <li><a href="#">Secretary-General's Bulletins</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Press and Media</h4>
+                    <ul>
+                        <li><a href="#">UN News</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">Daily Press Briefing</a></li>
+                        <li><a href="#">Secretary-General's Speeches</a></li>
+                        <li><a href="#">Photos</a></li>
+                        <li><a href="#">UN Web TV</a></li>
+                        <li><a href="#">UN Video</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li><a href="#">Media Accreditation</a></li>
+                        <li><a href="#">Media Contacts</a></li>
+                        <li><a href="#">UN Chronicle</a></li>
+                        <li><a href="#">UN Journal</a></li>
+                        <li><a href="#">Audiovisual Library</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Webcast</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">UN</div>
+                    <div>
+                        <div style="font-weight: bold; font-size: 14px;">United Nations</div>
+                        <div style="font-size: 11px;">Peace, dignity and equality on a healthy planet</div>
+                    </div>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" title="Facebook">📘</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="YouTube">📺</a>
+                    <a href="#" title="Flickr">📷</a>
+                    <a href="#" title="Instagram">📸</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="#">A-Z SITE INDEX</a>
+                    <a href="#">CONTACT</a>
+                    <a href="#">COPYRIGHT</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">FRAUD ALERT</a>
+                    <a href="#">PRIVACY NOTICE</a>
+                    <a href="#">TERMS OF USE</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
