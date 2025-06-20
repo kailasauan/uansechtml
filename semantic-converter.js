@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
         banner.className = 'relative h-[500px] flex items-end justify-center text-center text-white overflow-hidden';
         banner.innerHTML = `
             <img src="${imageUrl}" alt="Banner background" class="absolute top-0 left-0 w-full h-full object-cover z-10 transition-transform duration-700 ease-out hover:scale-105">
-            <div class="absolute top-0 left-0 w-full h-full banner-overlay-gradient z-20"></div>
+            <!-- <div class="absolute top-0 left-0 w-full h-full banner-overlay-gradient z-20"></div> -->
             
             <div class="absolute top-20 left-5 md:top-24 md:left-8 z-30 flex flex-col items-center gap-2.5 p-4 animate-fade-in-up">
                 <img src="${window.SITE_THEME.logoUrl || ''}" alt="UAN Logo" class="w-48 md:w-72 h-auto object-contain logo-glow transition-all duration-500 ease-out hover:scale-105 drop-shadow-2xl">
